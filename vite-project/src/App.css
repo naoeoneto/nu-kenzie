@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+}
+
+#root{
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+} 
+
+/* header {
+  display: flex;
+  width: 100vw;
+  padding: 2rem;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+/* header > img {
+  justify-content: flex-start;
+}
+
+header > button {
+  justify-content: flex-end;
+} */
