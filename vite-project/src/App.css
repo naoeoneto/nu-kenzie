@@ -1,18 +1,7 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0 auto;
-  list-style: none;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
-html {
-  background-color: var(--gray-scale-4);
-}
-
 :root {
-   /* LANDING PAGE */
+
   --color-primary-1: #fd377e;
   --color-primary-2: #e34981;
   --color-secondary: #03b898;
@@ -31,40 +20,36 @@ html {
   --font-weight-2: 400;
 }
 
-/* #root {
-  
-} */
-
-.App {
-  /* margin: 0 1rem; */
+#root {
   height: 100vh;
-  width: 100vw; 
-  font-family: 'Nunito', sans-serif; 
-  background-color: var(--gray-scale-4);
-} 
-
-/* LANDING PAGE */
+  width: 100vw;
+  margin: 0 10px;
+  
+}
 
 body {
   height: 100vh;
   width: 100vw;
-  /* margin: 0 auto; */
-  background-color: var(--gray-scale-4);
 }
+
+.App {
+  font-family: 'Nunito', sans-serif;
+} 
+
+/* LANDING PAGE */
 
 .landing__page {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  padding: 3rem 0;
+  align-items: center;
 }
 
 .landing__page__card {
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
   justify-content: center;
-  padding: 1rem 3rem;
+  padding: 1rem 0;
   gap: 1.75rem;
   height: 50%;
   width: 70%;
@@ -82,14 +67,14 @@ body {
 .landing__page__card > h1 {
   font-size: var(--font-size-1);
   font-weight: var(--font-weight-1);
-  color: var(--gray-scale-1);
+  color: var(--gray-scale-4);
 }
 
 .landing__page__card > p {
   font-size: var(--font-size-5);
   font-weight: var(--font-weight-2);
   margin: 0;
-  color: var(--gray-scale-1);
+  color: var(--gray-scale-4);
 }
 
 .enter__btn {
@@ -99,14 +84,17 @@ body {
   font-size: var(--font-size-5);
   font-weight: var(--font-weight-2);
   border: none;
+  cursor: pointer;
 }
 
 .enter__btn:hover {
   background-color: var(--color-primary-2);
+  border: none;
 }
 
 .landing__page__img {
   height: 50%;
+  margin: 0;
 }
 
 .landing__page__img > figure {
@@ -114,38 +102,64 @@ body {
 }
 
 .landing__page__img > figure > img {
-  height: 350px;
+  height: 300px;
   object-fit: cover;
+}
+
+.home__page {
+  display: flex;
+  flex-direction: column;
 }
 
 /* HOME PAGE */
 
-/* header {
+header {
   display: flex;
-  width: 100vw;
-  padding: 2rem;
-  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 0;
   justify-content: space-between;
   align-items: center;
-} */
-
-/* header > img {
-  justify-content: flex-start;
+  max-width: 2560px;
+  box-shadow: 0 4px 32px -12px var(--gray-scale-1) 0.25;
 }
 
-header > button {
-  justify-content: flex-end;
-} */
+header > img {
+  margin: 0;
+}
+
+.header__btn {
+  margin: 0;
+  background-color: var(--gray-scale-2);
+  color: var(--gray-scale-4);
+  cursor: pointer;
+}
+
+.header__btn:hover {
+  background-color: var(--gray-scale-4);
+  color: var(--gray-scale-1);
+  border: var(--gray-scale-1) 1px solid;
+  transition: 0.9;
+}
+
+.home__info {
+  height: 50%;
+  margin-top: 2.5rem;
+}
+
+.home__table {
+  height: 50%;
+  margin-top: 2.5rem;
+}
 
 @media screen and (min-width: 769px) {
-  /* .App { */
-    /* margin: 0 6.25rem;
-  } */
+  #root {
+   margin: 0 6.25rem;
+  }
 
   .landing__page {
     flex-direction: row;
-    padding: 5.75rem 6.25rem;
-    /* margin: 0 6.25rem; */
+    justify-content: center;
+    align-items: center;
   }
 
   .landing__page__card, .landing__page__img{
@@ -169,8 +183,26 @@ header > button {
     width: 60%;
   }
 
+  .landing__page__img > figure {
+    display: flex;
+    align-items: center;
+  }
+
   .landing__page__img > figure > img {
     height: 500px;
     object-fit: cover;
+  }
+
+  .home__page {
+    flex-direction: row;
+    gap: 3.75rem;
+  }
+
+  .home__info {
+    width: 40%;
+  }
+
+  .home__table {
+    width: 60%;
   }
 }

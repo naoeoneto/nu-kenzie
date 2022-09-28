@@ -1,7 +1,7 @@
 import { useState } from "react";
+import "./reset.css"
 import "./App.css";
 import nuKenzieLogo from './assets/nuKenzie.svg'
-import nuKenzieDarkLogo from './assets/nuKenzieDark.svg'
 import illustration from './assets/illustration.svg'
 import { Form } from "./components/Form";
 import { List } from "./components/List";
@@ -30,16 +30,16 @@ function App() {
 
   return (
     <div className="App">
-      {
-        page ? (
+      {page ? (
         <section className="landing__page">
           <div className="landing__page__card">
             <figure>
-                <img src={nuKenzieDarkLogo} alt="Logo Nu Kenzie" />
+                <img src={nuKenzieLogo} alt="Logo Nu Kenzie" />
             </figure>
             <h1>Centralize o controle das suas finanças</h1>
             <p>de forma rápida e segura</p>
-            <button className="enter__btn" onClick={checkPage}>Iniciar</button>
+            <button className="enter__btn" 
+            onClick={checkPage}>Iniciar</button>
           </div>
           <div className="landing__page__img">
             <figure>
@@ -51,18 +51,24 @@ function App() {
       <div>
       <header>
         <img src={nuKenzieLogo} alt="Logo Nu Kenzie" />
-        <button onClick={checkPage}>Início</button>
+        <button className="header__btn" 
+        onClick={checkPage}>Início</button>
       </header>
-      <section>
-        <Form props={listTransactions} addTransaction={addTransaction} types={types} />
-        <TotalMoney list={listTransactions} />
-      </section>
-      <section>
-        <div>
-          <h2>Resumo Financeiro</h2>
-        </div>
-        <List listTransactions={filtered} removeTransaction={removeTransaction} setFilteredItems={setFilteredItems} types={types} />
-      </section>
+      <article className="home__page">
+        <section className="home__info">
+          <Form props={listTransactions} 
+          addTransaction={addTransaction} 
+          types={types} />
+          <TotalMoney list={listTransactions} />
+        </section>
+        <section className="home__table">
+          <List className="home__cards" 
+          listTransactions={filtered} 
+          removeTransaction={removeTransaction} 
+          setFilteredItems={setFilteredItems} 
+          types={types} />
+        </section>
+      </article>
       </div>
   )}
     </div>

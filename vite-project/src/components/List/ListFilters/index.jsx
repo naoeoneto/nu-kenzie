@@ -1,9 +1,14 @@
+import "./style.css"
+
 export function ListFilters({ types, setFilteredItems }){
     return (
-        <div>
-            <button onClick={() => setFilteredItems("")}>Todas</button>
+        <div className="filters">
+            <button className="filter__btn" 
+            onClick={() => setFilteredItems("")}>todas</button>
             {types.map((type) => (
-                <button key={type} onClick={() => setFilteredItems(type)}>{type}</button>
+                <button className="filter__btn" 
+                key={type} 
+                onClick={() => setFilteredItems(type)}>{type}</button>
             ))}
         </div>
     )

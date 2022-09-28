@@ -1,0 +1,70 @@
+.home__form, .form__description, .form__amount, .form__type {
+    display: flex;
+    flex-direction: column;
+}
+
+.home__form {
+    border: var(--gray-scale-3) 1px solid;
+    padding: 2.375rem 1.5rem;
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.form__description__title {
+    margin-bottom: 0.75rem;
+    font-size: var(--font-size-4);
+    color: var(--gray-scale-3);
+}
+
+input, select {
+    padding: 0.75rem 1rem;
+    background-color: var(--gray-scale-1);
+    margin-bottom: 0.25rem;
+    border: none;
+}
+
+.form__description > input::placeholder, 
+.form__amount > input::placeholder {
+    font-size: var(--font-size-5);
+    color: var(--gray-scale-3);
+}
+
+.form__description__example{
+    color: var(--gray-scale-3);
+    font-size: var(--font-size-4);
+    line-height: 20px;
+}
+
+.form__money {
+    display: flex;
+    gap: 2.25rem;
+}
+
+.form__amount, .form__type{
+    width: 50%;
+}
+
+.form__amount__title, .form__type__title{
+    font-size: var(--font-size-4);
+    color: var(--gray-scale-3);
+    line-height: 22px;
+    margin-bottom: 0.5rem;
+}
+
+.form__amount > input {
+    padding: 0.75rem 1rem;
+}
+
+.form__btn {
+    width: 100%;
+    background-color: var(--color-primary-1);
+    color: var(--gray-scale-1);
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-2);
+    border: none;
+    cursor: pointer;
+}
+
+.form__btn:hover {
+    background-color: var(--color-primary-2);
+}

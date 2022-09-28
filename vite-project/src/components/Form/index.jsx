@@ -1,4 +1,5 @@
 import { useState } from "react"
+import "./style.css"
 
 export function Form({ addTransaction, types }){
     const [formData, setFormData] = useState({
@@ -21,29 +22,42 @@ export function Form({ addTransaction, types }){
         }
     
     return (
-        <form onSubmit={submitData}>
-            <input 
-            type="text"
-            placeholder="Digite aqui sua descrição"
-            onChange={(event) => setFormData({ description: event.target.value })}
-            />
-            <div>
+        <form className="home__form" onSubmit={submitData}>
+            <div className="form__description">
+                <label className="form__description__title">Descrição</label>
                 <input 
                 type="text"
-                placeholder="Valor"
-                onChange={(event) => setFormData({ ...formData, amount: event.target.value })}
+                placeholder="Digite aqui sua descrição"
+                onChange={(event) => setFormData({ description: event.target.value })}
+                value={formData.description}
                 />
-                <select 
-                name="Tipo do valor" 
-                id=""
-                onChange={(event) => setFormData({ ...formData, type: event.target.value })}
-                >
-                    {types.map((type, index) => (
-                        <option key={index} value={type}>{type}</option>
-                    ))}
-                </select>
+                <label className="form__description__example">Ex.: Compra de Roupas</label>
             </div>
-            <button type="submit">Inserir Valor</button>
+            <section className="form__money">
+                <div className="form__amount">
+                <label className="form__amount__title">Valor</label>
+                    <input 
+                    type="text"
+                    placeholder="Valor"
+                    onChange={(event) => setFormData({ ...formData, amount: event.target.value })}
+                    value={formData.amount}
+                    />
+                </div>
+                <div className="form__type">
+                    <label className="form__type__title">Tipo de valor</label>
+                    <select 
+                    name="Tipo do valor" 
+                    id=""
+                    onChange={(event) => setFormData({ ...formData, type: event.target.value })}
+                    defaultValue={formData.type}
+                    >
+                        {types.map((type, index) => (
+                            <option key={index} value={type}>{type}</option>
+                        ))}
+                    </select>
+                </div>
+            </section>
+            <button className="form__btn" type="submit">Inserir Valor</button>
         </form>
     )
 }

@@ -1,0 +1,40 @@
+.home__bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: 1.75rem;
+}
+
+.bar__title {
+    color: var(--gray-scale-4);
+    font-size: var(--font-size-5);
+    line-height: 30px;
+    font-weight: var(--font-weight-1);
+}
+
+.home__cards {
+    padding-inline-start: 0;
+}
+
+.no__cards {
+    font-size: var(--font-size-2);
+    font-weight: var(--font-weight-1);
+    line-height: 34px;
+    color: var(--gray-scale-3);
+    text-align: center;
+}
+
+@media screen and (min-width: 769px) {
+    .home__bar {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0;
+    }
+
+    .no__cards {
+        text-align: start;
+    }
+}
