@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import nuKenzieLogo from './assets/nuKenzie.svg'
+import nuKenzieDarkLogo from './assets/nuKenzieDark.svg'
 import illustration from './assets/illustration.svg'
 import { Form } from "./components/Form";
 import { List } from "./components/List";
@@ -31,16 +32,16 @@ function App() {
     <div className="App">
       {
         page ? (
-        <section>
-          <div>
+        <section className="landing__page">
+          <div className="landing__page__card">
             <figure>
-                <img src={nuKenzieLogo} alt="Logo Nu Kenzie" />
+                <img src={nuKenzieDarkLogo} alt="Logo Nu Kenzie" />
             </figure>
             <h1>Centralize o controle das suas finanças</h1>
             <p>de forma rápida e segura</p>
-            <button onClick={checkPage}>Iniciar</button>
+            <button className="enter__btn" onClick={checkPage}>Iniciar</button>
           </div>
-          <div>
+          <div className="landing__page__img">
             <figure>
               <img src={illustration} alt="" />
             </figure>
