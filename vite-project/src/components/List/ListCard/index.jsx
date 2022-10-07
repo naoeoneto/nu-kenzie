@@ -3,7 +3,7 @@ import "./style.css"
 
 export function ListCard({ transaction, removeTransaction }){
     return (
-        <li className="card">
+        <li className={transaction.type == 'entrada' ? 'card__in' : 'card__out'}>
           <section className="card__info">
             <div>
               <h3 className="card__description">{transaction.description}</h3>

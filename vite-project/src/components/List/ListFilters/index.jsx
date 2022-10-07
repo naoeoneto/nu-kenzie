@@ -3,7 +3,7 @@ import "./style.css"
 export function ListFilters({ types, setFilteredItems }){
     return (
         <div className="filters">
-            <button className="filter__btn" 
+            <button className="filter__btn all" 
             onClick={() => setFilteredItems("")}>todas</button>
             {types.map((type) => (
                 <button className="filter__btn" 

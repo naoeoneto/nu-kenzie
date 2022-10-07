@@ -9,8 +9,12 @@
     border: none;
 }
 
-.filter__btn:hover {
+.filter__btn:hover, .all {
     background-color: var(--color-primary-1);
     color: var(--gray-scale-1);
     border: none;
+}
+
+.all:hover {
+    background-color: var(--color-primary-2);
 }
